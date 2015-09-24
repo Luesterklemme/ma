@@ -1,0 +1,166 @@
+
+
+
+\usepackage{xspace}
+
+%\setkomafont{sectioning}{\rmfamily} %<-- für Überschriften in "`Roman"'-Schriftart
+
+
+
+
+
+%---------------------------------------------
+% Mehr Möglichkeiten bei Tabellen:
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{arydshln}
+
+ 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}		%deutsche Silbentrennung,
+% \usepackage[ngerman]{babel}   %neue Rechtschreibung mit ngerman
+ \usepackage[english]{babel}
+
+%\usepackage{ae,aecompl} % verhindert Bitmap-Schriften im PDF
+%\usepackage{times} % verwendet Postscript-Schriftarten
+
+%---------------------------------------------
+% Zeilen-Abstands Paket laden
+%\usepackage{setspace}
+%            \onehalfspacing                    % oder
+%            \doublespacing                     % oder
+%            \singlespacing                      % oder
+%            \begin{spacing}{2.3}
+%            ...
+%            \end{spacing}
+
+
+
+
+
+%------------------------------------------
+% Paket für schöne Tabellen
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usepackage{supertabular}
+\usepackage{multirow}		% Paket, um Tabellenzellen vertikal zu verbinden
+
+%---------------------------------------------
+% Graphics laden für Grafiken
+\usepackage{caption}
+
+\usepackage{graphicx, geometry, psfrag}
+\usepackage{float} %for figur possitioning with [H]
+\usepackage{subfig}
+\usepackage{siunitx}
+
+
+
+\usepackage[section]{placeins} %sets a barrier for float figures in next section
+% Bilder sollen "Abb." heißen (nicht "Abbildung")
+%\addto\captionsngerman{
+%  \renewcommand{\figurename}{Abb.}	% "Abb." statt "Abbildung" schreiben
+%  \renewcommand{\tablename}{Tab.}	% "Tab." statt "Tabelle" schreiben
+%		}
+
+
+%---------------------------------------------
+% Größe einer beschreibbaren Seite
+\geometry{  body={15.5cm, 23cm}, top=3cm, left=3cm }
+
+% Pakete um fertige PDF-Seiten einzubinden
+\usepackage{eso-pic}
+\usepackage{pdfpages}
+
+
+%Liefert viele Tools für Math-Mode: 
+\usepackage{amsmath}
+\usepackage{amsthm}		%Ergänzung zu "amsmath"
+\usepackage{amssymb}	% Symbole
+
+% Paket für Rahmen
+\usepackage{framed}
+
+
+	
+% \usepackage{chngcntr}              %für durchlaufendes Bildernummerieren
+% \counterwithout{figure}{section}
+
+%---------------------------------------------
+% Index-Modul laden
+%\makeindex
+%\usepackage{makeidx}
+%\makeglossary
+
+%---------------------------------------------
+% Landscape-Paket, um einzelne Teile auf Querformat zu setzen
+\usepackage{lscape}
+% Verwendung:
+%	\begin{landscape}
+%      ...
+%	\end{landscape}
+
+\usepackage{rotating}
+
+%---------------------------------------------
+% Fußnoten am Text ausgerichtet
+%\usepackage[flushmargin]{footmisc} %Fußnoten am Text ausgerichtet
+
+
+%------------------------------------------
+%Erlaubt das Grad-Celsius Zeichen mit direkt via \grad zu setzen
+\newcommand{\grad}{\ensuremath{^\circ}}
+
+
+%------------------------------------------
+% Schriftgröße des Lit-Verz. ändern
+%\newcommand{\bibfont    }{\footnotesize}
+% Literaturverzeichnis nach DIN-Norm
+\usepackage{natbib}
+
+% vertikalen Abstand ändern
+\setlength\bibsep{1.4mm}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.7}
+
+
+
+% Tiefe des Inhaltsverzeichnis angeben, Standard: 2
+%\setcounter{tocdepth}{2}
+
+
+
+
+%---------------------------------------------
+% PDF-Paket und Hypperref laden (zum Einstellen von Autor, Titel, .... in PDF-Infos)
+% 	muss am Ende vom Header stehen
+
+\usepackage{wrapfig}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+\newcommand{\changefont}[3]{
+\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+
+\changefont{pcr}{m}{n}
+\usepackage[
+        pdftex,
+        %a4paper,
+        %backref,
+        %pagebackref,
+        bookmarks,
+        bookmarksopen=false,
+        bookmarksnumbered=false,
+        pdfsubject={Master Thesis},
+        pdfauthor={Benjamin Hollmach},
+        pdftitle={TITEL},
+        pdfkeywords={KEYWORDS},
+        colorlinks=true, 
+        linkcolor= black,		%darkblue
+        %menucolor=darkblue,
+        citecolor= black,		%darkred
+        urlcolor= darkblue, % black,
+		pdfcreator={Name},
+]{hyperref} % Für Print-Version das "hyperref" auskommentieren

@@ -1,0 +1,137 @@
+
+\documentclass[
+%german,
+12pt,
+%BCOR40mm, % Zusätzlicher Rand zum Binden
+%twoside,
+openright,
+openbib]{scrreprt} 
+
+
+\input{Style}
+
+%*********************************************************
+% Anfang
+%*********************************************************
+\begin{document}
+
+
+
+
+\pagenumbering{roman}
+
+\input{Titel}
+
+\cleardoublepage
+
+\onehalfspacing
+
+
+\input{Abstract}
+\newpage
+
+
+
+% ************** eine Leerseite ********************
+
+\tableofcontents
+
+
+
+
+
+% --------------------------------------------------
+% TABELLENVERZEICHNIS
+% --------------------------------------------------
+
+\listoftables
+% --------------------------------------------------
+% NOMENKLATUR
+% --------------------------------------------------
+
+
+%\printnomenclature
+
+%--------------------------------------------------
+% ABBILDUNGSVERZEICHNIS
+% --------------------------------------------------
+%\cleardoublepage
+\listoffigures
+
+
+\cleardoublepage
+
+% --------------------------------------------------
+% HAUPTTEIL
+% --------------------------------------------------
+
+
+
+
+
+\pagestyle{fancy}
+
+% \lhead{Chapter \thesection} %for forced display on every page (except chapter beginnings) 
+\lhead{}   
+\rhead{\rightmark}
+\pagenumbering{arabic}
+\input{Kapitel0}
+\input{Kapitel2}
+\input{Kapitel3}
+\input{Kapitel4}
+\input{Kapitel5}
+
+
+
+
+\newpage
+
+\appendix
+%\pagenumbering{alph}
+% --------------------------------------------------
+% Listing-VERZEICHNIS
+% --------------------------------------------------
+%\addcontentsline{toc}{chapter}{Verzeichnis der Listings}
+
+% --------------------------------------------------
+% LITERATURVERZEICHNIS
+% --------------------------------------------------
+
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+\singlespacing
+\lhead{}
+\begin{scriptsize}%{footnotesize}%
+\bibliographystyle{unsrt}   %only numbers sorted by appearance
+% for a list of styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
+% when changing the style delete ALL temporary filex (everything not .tex or .bib
+
+%das File mit den Referenzen drin, aber ohne Extension .bib!!
+\bibliography{bibo}
+\end{scriptsize}%{footnotesize}%
+
+
+
+% ----------------------------------------------------------------------------------------------------------
+% Anhang
+% ----------------------------------------------------------------------------------------------------------
+
+% \newpage
+
+% \chapter*{Anhang}
+% \section*{GUI}
+% Ein toller Anhang.
+% 
+% \section*{Screenshot}
+% \label{app:screenshot}
+% Unterkategorie, die nicht im Inhaltsverzeichnis auftaucht.
+
+
+
+% ==================================================
+% ENDE
+% ==================================================
+
+
+\end{document}
